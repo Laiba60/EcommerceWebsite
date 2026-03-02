@@ -54,7 +54,7 @@ const Products = () => {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header section */}
         <div className="text-center mb-10 max-w-150 mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">
+          <p data-aos="fade-up" className="text-sm text-[#4263eb]">
             Top Selling Products for you
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
@@ -94,7 +94,7 @@ const Products = () => {
           </div>
           {/* view all button */}
           <div className="flex justify-center">
-            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
+            <button className="text-center mt-10 cursor-pointer bg-[#4263eb] text-white py-1 px-5 rounded-md">
               View All Button
             </button>
           </div>

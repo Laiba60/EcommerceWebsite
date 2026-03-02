@@ -33,7 +33,7 @@ const TopProducts = ({ handleOrderPopup }) => {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header section */}
         <div className="text-left mb-24">
-          <p data-aos="fade-up" className="text-sm text-primary">
+          <p data-aos="fade-up" className="text-sm text-[#4263eb]">
             Top Rated Products for you
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
@@ -49,7 +49,7 @@ const TopProducts = ({ handleOrderPopup }) => {
           {ProductsData.map((data) => (
             <div
               data-aos="zoom-in"
-              className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-75"
+              className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-[#4263eb] hover:text-white relative shadow-xl duration-300 group max-w-75"
             >
               {/* image section */}
               <div className="h-25">
@@ -73,7 +73,7 @@ const TopProducts = ({ handleOrderPopup }) => {
                   {data.description}
                 </p>
                 <button
-                  className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
+                  className="bg-[#4263eb] hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-[#4263eb]"
                   onClick={handleOrderPopup}
                 >
                   Order Now

@@ -72,7 +72,7 @@ const Testimonials = () => {
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* header section */}
         <div className="text-center  mb-10 max-w-150 mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">
+          <p data-aos="fade-up" className="text-sm text-[#4263eb]">
             What our customers are saying
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
@@ -91,7 +91,7 @@ const Testimonials = () => {
               <div className="my-6">
                 <div
                   key={data.id}
-                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-slate-600  bg-primary/10 relative"
+                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-slate-600  bg-[#4263eb]/10 relative"
                 >
                   <div className="mb-4">
                     <img

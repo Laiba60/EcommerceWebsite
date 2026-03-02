@@ -45,7 +45,7 @@ const Hero = ({ handleOrderPopup }) => {
   return (
     <div className="relative overflow-hidden min-h-137.5 sm:min-h-162 bg-gray-100 flex justify-center items-center dark:bg-slate-950 dark:text-white duration-200 ">
       {/* background pattern */}
-      <div className="h-75 w-175 bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
+      <div className="h-75 w-175 bg-[#4263eb]/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* hero section */}
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-0">
         <Slider {...settings}>
@@ -77,7 +77,7 @@ const Hero = ({ handleOrderPopup }) => {
                   >
                     <button
                       onClick={handleOrderPopup}
-                      className="bg-linear-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                      className="bg-linear-to-r from-[#4263eb] to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
                     >
                       Order Now
                     </button>
