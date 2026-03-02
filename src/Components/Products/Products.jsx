@@ -51,9 +51,9 @@ const ProductsData = [
 const Products = () => {
   return (
     <div className="mt-14 mb-12">
-      <div className="container">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header section */}
-        <div className="text-center mb-10 max-w-[600px] mx-auto">
+        <div className="text-center mb-10 max-w-150 mx-auto">
           <p data-aos="fade-up" className="text-sm text-primary">
             Top Selling Products for you
           </p>
@@ -79,7 +79,7 @@ const Products = () => {
                 <img
                   src={data.img}
                   alt=""
-                  className="h-[220px] w-[150px] object-cover rounded-md"
+                  className="h-55 w-37.5 object-cover rounded-md"
                 />
                 <div>
                   <h3 className="font-semibold">{data.title}</h3>

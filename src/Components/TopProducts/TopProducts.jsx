@@ -30,7 +30,7 @@ const ProductsData = [
 const TopProducts = ({ handleOrderPopup }) => {
   return (
     <div>
-      <div className="container">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header section */}
         <div className="text-left mb-24">
           <p data-aos="fade-up" className="text-sm text-primary">
@@ -49,14 +49,14 @@ const TopProducts = ({ handleOrderPopup }) => {
           {ProductsData.map((data) => (
             <div
               data-aos="zoom-in"
-              className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px]"
+              className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-75"
             >
               {/* image section */}
-              <div className="h-[100px]">
+              <div className="h-25">
                 <img
                   src={data.img}
                   alt=""
-                  className="max-w-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
+                  className="max-w-35 block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
                 />
               </div>
               {/* details section */}

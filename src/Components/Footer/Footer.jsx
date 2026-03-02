@@ -43,7 +43,7 @@ const FooterLinks = [
 const Footer = () => {
   return (
     <div className="text-white bg-[#212529]">
-      <div className="container">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-44 pt-5">
           {/* company details */}
           <div className="py-8 px-4">
