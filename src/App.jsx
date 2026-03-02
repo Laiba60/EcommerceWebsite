@@ -1,36 +1,45 @@
-import React, { use } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect,useState } from 'react'
-import Banner from './Components/Banner/Banner'
-import Navbar from './Components/Navbar/Navbar'
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import Products from "./Components/Products/Products";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import TopProducts from "./Components/TopProducts/TopProducts";
+import Banner from "./Components/Banner/Banner";
+import Subscribe from "./components/Subscribe/Subscribe";
+import Testimonials from "./Components/Testimonials/Testimonials";
+import Footer from "./components/Footer/Footer";
+import Popup from "./components/Popup/Popup";
 
 const App = () => {
-  const [orderPopup,setOrderPopup] = useState(false)
-  const handleordrPopup = () => {
-    setOrderPopup(!orderPopup)
-  }
-  useEffect(() => {
-    Aos.init({duration:2000,
-      offset:100,
-      easing:"ease-in-sine",
-      delay:100,
+  const [orderPopup, setOrderPopup] = React.useState(false);
 
-    })
-    Aos.refresh()
-  },[])
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
+  React.useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-   <>
-   <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-    <Navbar/>
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <Navbar handleOrderPopup={handleOrderPopup} />
+      <Hero handleOrderPopup={handleOrderPopup} />
+      <Products />
+      <TopProducts handleOrderPopup={handleOrderPopup} />
+      <Banner />
+      <Subscribe />
+      <Testimonials />
+      <Footer />
+      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+    </div>
+  );
+};
 
-    <Banner/>
-
-    
-
-   </div>
-   </>
-  )
-}
-
-export default App
+export default App;
