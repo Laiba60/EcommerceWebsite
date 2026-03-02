@@ -1,129 +1,93 @@
 import React from "react";
-// import footerLogo from "../../assets/logo.png";
-// import Banner from "../../assets/website/footer-pattern.jpg";
 import { FiShoppingBag } from "react-icons/fi";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaMapLocationDot } from "react-icons/fa6";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaLocationArrow,
-  FaMobileAlt,
-} from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 
-// const BannerImg = {
-//   backgroundImage: `url(${Banner})`,
-//   backgroundPosition: "bottom",
-//   backgroundRepeat: "no-repeat",
-//   backgroundSize: "cover",
-//   height: "100%",
-//   width: "100%",
-// };
-
 const FooterLinks = [
-  {
-    title: "Home",
-    link: "/#",
-  },
-  {
-    title: "About",
-    link: "/#about",
-  },
-  {
-    title: "Contact",
-    link: "/#contact",
-  },
-  {
-    title: "Blog",
-    link: "/#blog",
-  },
+  { title: "Home", link: "/#" },
+  { title: "About", link: "/#about" },
+  { title: "Contact", link: "/#contact" },
+  { title: "Blog", link: "/#blog" },
 ];
 
 const Footer = () => {
   return (
-    <div className="text-white bg-[#212529]">
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-44 pt-5">
-          {/* company details */}
-          <div className="py-8 px-4">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-1">
-              <FiShoppingBag size="30" />
-              {/* <img src={footerLogo} alt="" className="max-w-[50px]" /> */}
+    <footer className="bg-[#212529] text-white border-t border-gray-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-12">
+          
+          {/* Company Details */}
+          <div>
+            <h1 className="text-2xl font-bold flex items-center gap-2 mb-4">
+              <FiShoppingBag size={28} />
               ShopMe
             </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in
-              beatae ea recusandae blanditiis veritatis.
+            <p className="text-gray-300 text-sm leading-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Cum in beatae ea recusandae blanditiis veritatis.
             </p>
           </div>
 
-          {/* Footer Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
-            <div>
-              <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-[#4263eb] hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-[#4263eb] hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* Important Links */}
+          <div>
+            <h2 className="text-xl font-semibold mb-4">
+              Important Links
+            </h2>
+            <ul className="space-y-3">
+              {FooterLinks.map((link) => (
+                <li key={link.title}>
+                  <a
+                    href={link.link}
+                    className="text-gray-300 hover:text-[#4263eb] hover:translate-x-1 transition duration-300 inline-block"
+                  >
+                    {link.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social & Contact */}
+          <div>
+            <h2 className="text-xl font-semibold mb-4">
+              Contact Us
+            </h2>
+
+            {/* Social Icons */}
+            <div className="flex gap-4 mb-6">
+              <a href="#" className="hover:text-[#4263eb] transition">
+                <FaInstagram size={24} />
+              </a>
+              <a href="#" className="hover:text-[#4263eb] transition">
+                <FaFacebook size={24} />
+              </a>
+              <a href="#" className="hover:text-[#4263eb] transition">
+                <FaLinkedin size={24} />
+              </a>
             </div>
 
-            {/* social links */}
+            {/* Address */}
+            <div className="flex items-center gap-3 text-gray-300 mb-3">
+              <FaMapLocationDot />
+              <p>Indore, Madhya Pradesh</p>
+            </div>
 
-            <div>
-              <div className="flex items-center gap-3 mt-6">
-                <a href="#">
-                  <FaInstagram className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaFacebook className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaLinkedin className="text-3xl" />
-                </a>
-              </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-3">
-                  <FaMapLocationDot />
-                  <p>Indore, Madhya Pradesh</p>
-                </div>
-                <div className="flex items-center gap-3 mt-3">
-                  <IoCall />
-                  <p>+91 123456789</p>
-                </div>
-              </div>
+            {/* Phone */}
+            <div className="flex items-center gap-3 text-gray-300">
+              <IoCall />
+              <p>+91 123456789</p>
             </div>
           </div>
+
+        </div>
+
+        {/* Bottom Copyright */}
+        <div className="border-t border-gray-700 py-4 text-center text-gray-400 text-sm">
+          © {new Date().getFullYear()} ShopMe. All rights reserved.
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

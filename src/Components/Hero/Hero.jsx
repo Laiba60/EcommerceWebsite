@@ -10,30 +10,31 @@ const ImageList = [
     img: Image1,
     title: "Upto 50% off on all Men's Wear",
     description:
-      "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
     img: Image2,
     title: "30% off on all Women's Wear",
     description:
-      "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
     img: Image3,
     title: "70% off on all Products Sale",
     description:
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 
 const Hero = ({ handleOrderPopup }) => {
-  var settings = {
+  const settings = {
     dots: false,
     arrows: false,
     infinite: true,
     speed: 800,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
@@ -43,60 +44,47 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-137.5 sm:min-h-162 bg-gray-100 flex justify-center items-center dark:bg-slate-950 dark:text-white duration-200 ">
-      {/* background pattern */}
-      <div className="h-75 w-175 bg-[#4263eb]/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
-      {/* hero section */}
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-0">
+    <div className="relative overflow-hidden min-h-[600px] sm:min-h-[700px] bg-gray-100 flex items-center dark:bg-slate-950 dark:text-white duration-200">
+      
+      {/* Background Shape */}
+      <div className="absolute top-[-100px] right-0 w-[300px] h-[300px] bg-[#4263eb]/40 rounded-3xl rotate-45 -z-10"></div>
+
+      {/* Hero Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <Slider {...settings}>
           {ImageList.map((data) => (
-            <div>
-              <div className="grid grid-cols-1 sm:grid-cols-2">
-                {/* text content section */}
-                <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
-                  <h1
-                    data-aos="zoom-out"
-                    data-aos-duration="500"
-                    data-aos-once="true"
-                    className="text-5xl sm:text-6xl lg:text-7xl font-bold"
-                  >
+            <div key={data.id}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-8">
+
+                {/* Text Section */}
+                <div className="flex flex-col justify-center gap-4 text-center sm:text-left order-2 sm:order-1">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
                     {data.title}
                   </h1>
-                  <p
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="100"
-                    className="text-sm"
-                  >
+
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
                     {data.description}
                   </p>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="300"
-                  >
+
+                  <div>
                     <button
                       onClick={handleOrderPopup}
-                      className="bg-linear-to-r from-[#4263eb] to-[#63e6be] hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                      className="bg-gradient-to-r from-[#4263eb] to-[#63e6be] hover:scale-105 transition duration-300 text-white py-2 px-6 rounded-full"
                     >
                       Order Now
                     </button>
                   </div>
                 </div>
-                {/* image section */}
-                <div className="order-1 sm:order-2">
-                  <div
-                    data-aos="zoom-in"
-                    data-aos-once="true"
-                    className="relative z-10"
-                  >
-                    <img
-                      src={data.img}
-                      alt=""
-                      className="w-75 h-75 sm:h-112.5 sm:w-112.5 sm:scale-105 lg:scale-120 object-contain mx-auto"
-                    />
-                  </div>
+
+                {/* Image Section */}
+                <div className="order-1 sm:order-2 flex justify-center">
+                  <img
+                    src={data.img}
+                    alt="hero"
+                    className="w-[300px] sm:w-[400px] lg:w-[500px] object-contain"
+                  />
                 </div>
+
               </div>
             </div>
           ))}

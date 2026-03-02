@@ -1,53 +1,68 @@
 import React from 'react'
 import BannerImg from '../../assets/4547829.jpg'
-import {GrSecure} from 'react-icons/gr'
-import {IoFastFood} from 'react-icons/io5'
-import { GiTruck } from "react-icons/gi"; // valid Game Icon
+import { GrSecure } from 'react-icons/gr'
+import { IoFastFood } from 'react-icons/io5'
+import { GiTruck } from "react-icons/gi"
 
 const Banner = () => {
   return (
-    <div className="min-h-137.5 flex justify-center items-center py-12 sm:py-0" >
-        <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div data-aos="zoom-in">
-                    <img src={BannerImg} alt="Banner" className="max-w-100 h-350px w-full mx-auto object-cover" />
+    <div className="min-h-[550px] flex justify-center items-center py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-                </div>
-                <div className="flex flex-col justify-center gap-6 sm:pt-0">
-                    <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold">Winter Sale up to 50 percent off</h1>
-                    <p data-aos="fade-up" className="text-sm text-gray-500 tracking-wide leading-5">Lorelit. Omnis nihi impedit nam a!
-                    Temporibus, inventore at mollitia odit sequi, nulla odio ad dolorum nostrum vitae libero, praesentium facere. Eligendi, est. Necessitatibus ipsa voluptatem voluptates quo, porro incidunt inventore ad, tenetur vitae eaque minima.
-                    Mollitia perspiciatis, ipsam, tenetur quibusdam iusto pariatur suscipit nostrum consectetur aliquam quia aut. Aliquam maiores laudantium deserunt dolorum harum iusto nostrum facilis repellat temporibus eligendi labore, ipsam, a dolores atque.
-                    atu recusandae ratione v architecto vel perferendis necessitatibus, aut exercitat</p>
-                    <div className=" flex flex-col gap-4px ">
-                        <div data-aos="fade-up" className="flex items-center gap-4">
-                            <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-violet-400" />
-                            <p>Quality Products</p>
+          {/* Image Section */}
+          <div data-aos="zoom-in">
+            <img
+              src={BannerImg}
+              alt="Banner"
+              className="w-full max-w-[450px] h-auto mx-auto object-cover"
+            />
+          </div>
 
-                        </div>
-                        <div data-aos="" className="flex items-center gap-4">
-                            <IoFastFood className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" /> 
-                            <p>Fast Delivery</p>  
+          {/* Content Section */}
+          <div className="flex flex-col justify-center gap-6">
+            <h1
+              data-aos="fade-up"
+              className="text-3xl sm:text-4xl font-bold"
+            >
+              Winter Sale up to 50% off
+            </h1>
 
-                        </div>
-                        <div data-aos="" className="flex items-center gap-4">
-                            <GiTruck className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" /> 
-                            <p>Easy Payment methods</p>  
+            <p
+              data-aos="fade-up"
+              className="text-sm text-gray-500 leading-6"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore at mollitia odit sequi nulla odio ad dolorum nostrum vitae libero.
+            </p>
 
-                        </div>
-                        <div data-aos="" className="flex items-center gap-4">
-                            <GiTruck className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" /> 
-                            <p>Get Offers</p>  
+            <div className="flex flex-col gap-4">
 
-                        </div>
+              <div className="flex items-center gap-4">
+                <GrSecure className="h-12 w-12 p-3 rounded-full bg-violet-100 dark:bg-violet-400" />
+                <p>Quality Products</p>
+              </div>
 
-                    </div>
+              <div className="flex items-center gap-4">
+                <IoFastFood className="h-12 w-12 p-3 rounded-full bg-orange-100 dark:bg-orange-400" />
+                <p>Fast Delivery</p>
+              </div>
 
-                </div>
+              <div className="flex items-center gap-4">
+                <GiTruck className="h-12 w-12 p-3 rounded-full bg-green-100 dark:bg-green-400" />
+                <p>Easy Payment Methods</p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <GiTruck className="h-12 w-12 p-3 rounded-full bg-blue-100 dark:bg-blue-400" />
+                <p>Get Offers</p>
+              </div>
 
             </div>
+          </div>
 
         </div>
+      </div>
     </div>
   )
 }

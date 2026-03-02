@@ -11,13 +11,13 @@ const ProductsData = [
     img: Img1,
     title: "Women Ethnic",
     rating: 5.0,
-    color: "white",
+    color: "White",
     aosDelay: "0",
   },
   {
     id: 2,
     img: Img2,
-    title: "Women western",
+    title: "Women Western",
     rating: 4.5,
     color: "Red",
     aosDelay: "200",
@@ -27,7 +27,7 @@ const ProductsData = [
     img: Img3,
     title: "Goggles",
     rating: 4.7,
-    color: "brown",
+    color: "Brown",
     aosDelay: "400",
   },
   {
@@ -41,7 +41,7 @@ const ProductsData = [
   {
     id: 5,
     img: Img2,
-    title: "Fashin T-Shirt",
+    title: "Fashion T-Shirt",
     rating: 4.5,
     color: "Pink",
     aosDelay: "800",
@@ -50,55 +50,66 @@ const ProductsData = [
 
 const Products = () => {
   return (
-    <div className="mt-14 mb-12">
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header section */}
-        <div className="text-center mb-10 max-w-150 mx-auto">
+    <div className="py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header Section */}
+        <div className="text-center mb-12 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-[#4263eb]">
-            Top Selling Products for you
+            Top Selling Products for You
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <h1 data-aos="fade-up" className="text-3xl font-bold mt-2">
             Products
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
+          <p data-aos="fade-up" className="text-sm text-gray-500 mt-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Sit asperiores modi asperiores modi.
           </p>
         </div>
-        {/* Body section */}
-        <div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
-            {/* card section */}
-            {ProductsData.map((data) => (
-              <div
-                data-aos="fade-up"
-                data-aos-delay={data.aosDelay}
-                key={data.id}
-                className="space-y-3"
-              >
+
+        {/* Product Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center">
+          
+          {ProductsData.map((data) => (
+            <div
+              key={data.id}
+              data-aos="fade-up"
+              data-aos-delay={data.aosDelay}
+              className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-4 w-full max-w-[200px] hover:shadow-xl transition duration-300 group"
+            >
+              <div className="overflow-hidden rounded-md">
                 <img
                   src={data.img}
-                  alt=""
-                  className="h-55 w-37.5 object-cover rounded-md"
+                  alt={data.title}
+                  className="h-[220px] w-full object-cover group-hover:scale-105 transition duration-300"
                 />
-                <div>
-                  <h3 className="font-semibold">{data.title}</h3>
-                  <p className="text-sm text-gray-600">{data.color}</p>
-                  <div className="flex items-center gap-1">
-                    <FaStar className="text-yellow-400" />
-                    <span>{data.rating}</span>
-                  </div>
+              </div>
+
+              <div className="mt-3">
+                <h3 className="font-semibold text-sm">
+                  {data.title}
+                </h3>
+                <p className="text-xs text-gray-500">
+                  {data.color}
+                </p>
+
+                <div className="flex items-center gap-1 mt-1">
+                  <FaStar className="text-yellow-400 text-sm" />
+                  <span className="text-sm">{data.rating}</span>
                 </div>
               </div>
-            ))}
-          </div>
-          {/* view all button */}
-          <div className="flex justify-center">
-            <button className="text-center mt-10 cursor-pointer bg-[#4263eb] text-white py-1 px-5 rounded-md">
-              View All Button
-            </button>
-          </div>
+            </div>
+          ))}
+
         </div>
+
+        {/* View All Button */}
+        <div className="flex justify-center mt-12">
+          <button className="bg-[#4263eb] hover:bg-[#364fc7] transition duration-300 text-white py-2 px-6 rounded-md">
+            View All Products
+          </button>
+        </div>
+
       </div>
     </div>
   );
