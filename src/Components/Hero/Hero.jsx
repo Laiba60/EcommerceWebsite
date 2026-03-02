@@ -77,7 +77,7 @@ const Hero = ({ handleOrderPopup }) => {
                   >
                     <button
                       onClick={handleOrderPopup}
-                      className="bg-linear-to-r from-[#4263eb] to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                      className="bg-linear-to-r from-[#4263eb] to-[#63e6be] hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
                     >
                       Order Now
                     </button>

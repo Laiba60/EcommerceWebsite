@@ -22,11 +22,11 @@ const Menu = [
     link:"/#",
 },
 {
-    id:3,
+    id:4,
     name:"Men's Wear",
     link:"/#",
 },
-{    id:3,              
+{    id:5,              
     name:"Electronics",
     link:"/#",
 },
@@ -59,9 +59,9 @@ const Navbar = ({handleOrderPopup}) => {
                     <input type="text" placeholder="Search" className="w-50 sm:w-50 group-hover:w-75 transition-all duration-300 rounded-lg border-gray-300 py-1 px-2 text-sm focus:outline-none focus:border focus:border-[#4263eb] dark:border-gray-500 dark-bg-slate-800" />
                     <IoMdSearch className="text-slate-800 group-hover:text-[#4263eb] absolute top-1/2 -translate-y-1/2 right-3" />
                 </div>
-                <button onClick={()=>{handleOrderPopup()}} className="bg-linear-to-t from-[#4263eb] to-secondary transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 group">
+                <button onClick={()=>{handleOrderPopup()}} className="bg-linear-to-t from-[#4263eb] to-[#63e6be] transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center gap-3 group">
                     <span className="group-hover:block hidden trasnition-all duration-200">Order</span>
-                    <faCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer " />
+                    <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer " />
                     </button>
                     <div>
                         <DarkMode/>
